@@ -1,0 +1,30 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 223px;
+  color: white;
+  border-radius: 25px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 48px;
+}
+
+.banner-home {
+  background: rgba(0, 0, 0, 0.1) url("../assets/banner_home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.banner-about {
+  background: rgba(0, 0, 0, 0.1) url("../assets/banner_about.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}

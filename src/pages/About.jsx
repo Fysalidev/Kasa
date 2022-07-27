@@ -1,8 +1,10 @@
-function About () {
+import Banner from "../components/Banner";
+
+function About() {
   return (
-    <div>
-      <h1>Page - About</h1>
-    </div>
+    <section className="about">
+      <Banner title="" type="banner-about" />
+    </section>
   );
 }
 export default About;
