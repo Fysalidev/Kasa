@@ -1,0 +1,23 @@
+.error404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error404 h1 {
+  font-size: 18rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.error404 p {
+  font-size: 2.25rem;
+  margin-top: 4.125rem;
+  margin-bottom: 11.375rem;
+}
+
+.backtohome {
+  font-size: 1.125rem;
+  text-decoration: underline;
+}

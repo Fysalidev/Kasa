@@ -1,1 +1,9 @@
+#root{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
 
+section {
+    min-height: 53rem;
+}
