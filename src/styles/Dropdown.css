@@ -1,0 +1,43 @@
+.dropdown {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-button {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff6060;
+  border-radius: 5px;
+  padding:0 1rem 0 1rem;
+}
+
+.dropdown-button h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+.dropbtn{
+    background: transparent;
+    border:none;
+}
+
+.dropbtn i {
+    color:white;
+    font-size:2rem;
+    font-weight: bold;
+    
+}
+
+.dropdown-content p{
+    background-color: #F7F7F7;
+}
+
+.dropdown-content p{
+    font-size: 24px;
+    font-weight: 400;
+    padding: 2rem 1rem 1rem 1rem;
+    margin: 0;
+}
