@@ -8,15 +8,9 @@ function Accomodation() {
     (accomodation) => accomodation.id === id
   );
 
-  if (accomodation.length === 1) {
-    return (
-      <section className="accomodation">
-        <h1>{accomodation[0].title}</h1>
-      </section>
-    );
-  } else {
-    return <Error404 />;
-  }
+  return accomodation.length === 1 ?
+  <h1>{accomodation[0].title}</h1> 
+  : <Error404 />;
 }
 
 export default Accomodation;
