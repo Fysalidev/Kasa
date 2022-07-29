@@ -7,3 +7,9 @@
 section {
     min-height: 53rem;
 }
+
+.home{
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+}

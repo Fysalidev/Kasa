@@ -1,0 +1,23 @@
+.accomodation_card {
+  align-items: flex-end;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    #ff6060;
+  border-radius: 10px;
+  display: flex;
+  height: 340px;
+  padding: 1rem;
+  width: 340px;
+}
+
+.accomodation_card h2 {
+  color: white;
+  height: 3rem;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  width: 15rem;
+}
