@@ -1,11 +1,16 @@
 import "../styles/Home.css";
-import data from "../data/data.json";
+import accomodations from "../data/data.json";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
+import {useEffect} from "react";
+
 
 function Home() {
-  const accomodations = data.map((accomodation) => accomodation);
+  useEffect(() => {
+    fetch('./data/data.json').then(res => res.json()).then(data => console.log(data))
+  },[]);
+  
 
   return (
     <section className="home">

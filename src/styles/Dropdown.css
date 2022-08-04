@@ -1,6 +1,11 @@
 .dropdown {
     border-radius: 5px;
     overflow: hidden;
+    width: 100%;
+}
+
+.grow{
+    flex-grow: 1;
 }
 
 .dropdown-button {
@@ -31,13 +36,25 @@
     
 }
 
-.dropdown-content p{
+.dropdown-content{
+    width: 100%;
     background-color: #F7F7F7;
+    padding:2rem 1rem;
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 .dropdown-content p{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
-    padding: 2rem 1rem 1rem 1rem;
+    /* padding: 2rem 1rem 1rem 1rem; */
     margin: 0;
+}
+
+.dropdown-content ul{
+    font-size:18px;
+    font-weight: 400;
 }

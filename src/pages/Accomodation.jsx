@@ -1,22 +1,29 @@
 import "../styles/Accomodation.css";
-import data from "../data/data.json";
+import accomodations from "../data/data.json";
 import { useParams } from "react-router-dom";
 import Error404 from "../pages/Error404";
 import Dropdown from "../components/Dropdown";
 
+
+
 function Accomodation() {
   const { id } = useParams();
-  const accomodation = data.filter((accomodation) => accomodation.id === id);
+  const accomodation = accomodations.filter((accomodation) => accomodation.id === id);
   const tags = accomodation[0].tags;
+  const host = accomodation[0].host;
+  const description = accomodation[0].description;
+  const equipements = accomodation[0].equipments;
+
+
 
   return accomodation.length === 1 ? (
     <section className="accomodation">
       <div className="accomodation__carrousel">
         <button className="slide-button-left">
-          <i class="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left"></i>
         </button>
         <button className="slide-button-right">
-          <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>
       <div className="accomodation__info">
@@ -25,33 +32,32 @@ function Accomodation() {
           <p>{accomodation[0].location}</p>
           <ul className="tagsList">
             {tags.map((tag) => (
-              <li>{tag}</li>
+              <li key={tag}>{tag}</li>
             ))}
           </ul>
         </div>
         <div className="accomodation__info__content">
           <div className="profile">
-            <span>Nom</span>
-            <span>Prénom</span>
-            <span>Photo</span>
+            <span>{host.name}</span>
+            <img src={host.picture} alt={host.name} />
           </div>
           <div className="rating">
-            <i class="fa-solid fa-star-sharp"></i>
-            <i class="fa-solid fa-star-sharp"></i>
-            <i class="fa-solid fa-star-sharp"></i>
-            <i class="fa-solid fa-star-sharp"></i>
-            <i class="fa-solid fa-star-sharp"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
           </div>
         </div>
       </div>
       <div className="accomodation__dorpdowns">
         <Dropdown
           title="Description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          content={description}
         />
         <Dropdown
           title="Equipement"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          content={equipements}
         />
       </div>
     </section>

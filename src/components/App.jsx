@@ -1,3 +1,4 @@
+
 import "../styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
@@ -8,6 +9,7 @@ import Accomodation from "../pages/Accomodation";
 import Error404 from "../pages/Error404";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Header />
