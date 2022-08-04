@@ -44,7 +44,8 @@
 .profile {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .profile p {
@@ -58,6 +59,15 @@
   border-radius: 25rem;
   object-fit: cover;
   object-position: center;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    gap:10px;
+    font-size: 1.7rem;
 }
 
 .accomodation__info__content h1 {
