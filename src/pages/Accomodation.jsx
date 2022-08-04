@@ -4,17 +4,15 @@ import { useParams } from "react-router-dom";
 import Error404 from "../pages/Error404";
 import Dropdown from "../components/Dropdown";
 
-
-
 function Accomodation() {
   const { id } = useParams();
-  const accomodation = accomodations.filter((accomodation) => accomodation.id === id);
+  const accomodation = accomodations.filter(
+    (accomodation) => accomodation.id === id
+  );
   const tags = accomodation[0].tags;
   const host = accomodation[0].host;
   const description = accomodation[0].description;
   const equipements = accomodation[0].equipments;
-
-
 
   return accomodation.length === 1 ? (
     <section className="accomodation">
@@ -38,7 +36,7 @@ function Accomodation() {
         </div>
         <div className="accomodation__info__content">
           <div className="profile">
-            <span>{host.name}</span>
+            <p>{host.name}</p>
             <img src={host.picture} alt={host.name} />
           </div>
           <div className="rating">
@@ -51,14 +49,8 @@ function Accomodation() {
         </div>
       </div>
       <div className="accomodation__dorpdowns">
-        <Dropdown
-          title="Description"
-          content={description}
-        />
-        <Dropdown
-          title="Equipement"
-          content={equipements}
-        />
+        <Dropdown title="Description" content={description} />
+        <Dropdown title="Equipement" content={equipements} />
       </div>
     </section>
   ) : (

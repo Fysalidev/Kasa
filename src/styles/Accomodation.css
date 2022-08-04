@@ -1,81 +1,98 @@
-.accomodation{
-    display: flex;
-    flex-direction: column;
-    gap:2rem;  
+.accomodation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.accomodation__carrousel{
-    align-items: center;
-    background: url("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 25px;
-    display: flex;
-    height: 415px;
-    justify-content: space-between;
-    overflow: hidden;
-    padding: 0 1rem;
-    
+.accomodation__carrousel {
+  align-items: center;
+  background: url("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  display: flex;
+  height: 415px;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
-.accomodation__carrousel button{
-    background: none;
-    border: none;
-    outline: none;
-    height: 6rem;
+.accomodation__carrousel button {
+  background: none;
+  border: none;
+  outline: none;
+  height: 6rem;
 }
 
-
-.accomodation__carrousel button i{
-    color:white;
-    font-size: 5rem;
+.accomodation__carrousel button i {
+  color: white;
+  font-size: 5rem;
 }
 
-.accomodation__info{
-    display:flex;
-    justify-content: space-between;
+.accomodation__info {
+  display: flex;
+  justify-content: space-between;
 }
 
-.accomodation__info__content{
-    display:flex;
-    flex-direction: column;
-    gap:1rem;
+.accomodation__info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.accomodation__info__content h1{
-    margin:0;
-    font-weight: 500;
-    font-size: 36px;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.accomodation__info__content p{
-    margin:0;
-    font-weight: 500;
-    font-size: 18px;
+.profile p {
+  width: 93px;
+  text-align: right;
 }
 
-.accomodation__info__content ul{
-    display: flex;
-    gap:1rem;
+.profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 25rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.accomodation__info__content h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.accomodation__info__content p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.accomodation__info__content ul {
+  display: flex;
+  gap: 1rem;
 }
 
 .accomodation__info__content li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FF6060;
-    color:white;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 10px;
-    min-width: 115px;
-    height: 25px;
-    padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff6060;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  min-width: 115px;
+  height: 25px;
+  padding: 0.5rem 1rem;
 }
 
-.accomodation__dorpdowns{
-    display:flex;
-    justify-content: space-between;
-    gap:1rem;
+.accomodation__dorpdowns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
