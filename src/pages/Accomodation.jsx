@@ -3,6 +3,7 @@ import accomodations from "../data/data.json";
 import { useParams } from "react-router-dom";
 import Error404 from "../pages/Error404";
 import Dropdown from "../components/Dropdown";
+import {useState} from "react";
 
 function Accomodation() {
   const { id } = useParams();
@@ -13,20 +14,30 @@ function Accomodation() {
   const host = accomodation[0].host;
   const description = accomodation[0].description;
   const equipements = accomodation[0].equipments;
+  const pictures = accomodation[0].pictures;
+  const [galleryPosition, setGalleryPosition] = useState(0);
+
+  const next = () => {
+    galleryPosition < pictures.length - 1 ? setGalleryPosition(galleryPosition + 1) : setGalleryPosition(0);
+  }
+
+  const previous = () => {
+    galleryPosition > 0 ? setGalleryPosition(galleryPosition - 1) : setGalleryPosition(pictures.length - 1);
+  }
 
   return accomodation.length === 1 ? (
     <section className="accomodation">
       <div className="accomodation__carousel">
         <div className="controls">
-          <button className="controls__preview">
+          <button className="controls__previous" onClick={()=>previous()}>
             <i className="fa-solid fa-chevron-left"></i>
           </button>
-          <p>1/2</p>
-          <button className="controls__next">
+          <p>{galleryPosition + 1}/{pictures.length}</p>
+          <button className="controls__next" onClick={()=>next()}>
             <i className="fa-solid fa-chevron-right"></i>
           </button>
         </div>
-        <img src={accomodation[0].cover} alt="#" />
+        <img src={pictures[galleryPosition]} alt="#" />
       </div>
       <div className="accomodation__info">
         <div className="accomodation__info__content">
