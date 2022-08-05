@@ -11,7 +11,6 @@ function Home() {
     fetch('./data/data.json').then(res => res.json()).then(data => console.log(data))
   },[]);
   
-
   return (
     <section className="home">
       <Banner title="Chez vous, partout et ailleurs" type="banner-home" />

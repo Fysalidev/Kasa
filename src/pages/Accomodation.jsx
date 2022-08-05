@@ -16,13 +16,17 @@ function Accomodation() {
 
   return accomodation.length === 1 ? (
     <section className="accomodation">
-      <div className="accomodation__carrousel">
-        <button className="slide-button-left">
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
-        <button className="slide-button-right">
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
+      <div className="accomodation__carousel">
+        <div className="controls">
+          <button className="controls__preview">
+            <i className="fa-solid fa-chevron-left"></i>
+          </button>
+          <p>1/2</p>
+          <button className="controls__next">
+            <i className="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <img src={accomodation[0].cover} alt="#" />
       </div>
       <div className="accomodation__info">
         <div className="accomodation__info__content">

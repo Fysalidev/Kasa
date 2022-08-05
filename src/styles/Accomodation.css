@@ -4,35 +4,58 @@
   gap: 2rem;
 }
 
-.accomodation__carrousel {
-  align-items: center;
-  background: url("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.accomodation__carousel {
   border-radius: 25px;
-  display: flex;
   height: 415px;
-  justify-content: space-between;
   overflow: hidden;
-  padding: 0 1rem;
+  position: relative;
+  width: 100%;
 }
 
-.accomodation__carrousel button {
+.accomodation__carousel .controls {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.accomodation__carousel .controls button {
   background: none;
   border: none;
-  outline: none;
-  height: 6rem;
 }
 
-.accomodation__carrousel button i {
+.accomodation__carousel .controls button i {
   color: white;
   font-size: 5rem;
 }
 
-.accomodation__info {
-  display: flex;
-  justify-content: space-between;
+.accomodation__carousel .controls p {
+  align-self: flex-end;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.controls__preview {
+  margin-left: 1.5rem;
+}
+
+.controls__next {
+  margin-right: 1.5rem;
+}
+
+.accomodation__carousel img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: 0;
+  width: 100%;
 }
 
 .accomodation__info__content {
@@ -42,44 +65,43 @@
 }
 
 .profile {
-  display: flex;
   align-items: center;
-  justify-content: flex-end;
+  display: flex;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .profile p {
-  width: 93px;
   text-align: right;
+  width: 93px;
 }
 
 .profile img {
-  width: 64px;
-  height: 64px;
   border-radius: 25rem;
+  height: 64px;
   object-fit: cover;
   object-position: center;
+  width: 64px;
 }
 
-.rating{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: flex-end;
-    gap:10px;
-    font-size: 1.7rem;
+.rating {
+  align-items: center;
+  display: flex;
+  font-size: 1.7rem;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 .accomodation__info__content h1 {
-  margin: 0;
-  font-weight: 500;
   font-size: 36px;
+  font-weight: 500;
+  margin: 0;
 }
 
 .accomodation__info__content p {
   margin: 0;
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
 }
 
 .accomodation__info__content ul {
@@ -88,21 +110,21 @@
 }
 
 .accomodation__info__content li {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: #ff6060;
+  border-radius: 10px;
   color: white;
+  display: flex;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 10px;
-  min-width: 115px;
   height: 25px;
+  justify-content: center;
+  min-width: 115px;
   padding: 0.5rem 1rem;
 }
 
 .accomodation__dorpdowns {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
+  justify-content: space-between;
 }
