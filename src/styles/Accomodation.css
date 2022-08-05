@@ -58,6 +58,11 @@
   width: 100%;
 }
 
+.accomodation__info{
+  display: flex;
+  justify-content: space-between;
+}
+
 .accomodation__info__content {
   display: flex;
   flex-direction: column;
