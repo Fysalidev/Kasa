@@ -1,0 +1,53 @@
+.accomodation__carousel {
+  border-radius: 25px;
+  height: 415px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.accomodation__carousel .controls {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.accomodation__carousel .controls button {
+  background: none;
+  border: none;
+}
+
+.accomodation__carousel .controls button i {
+  color: white;
+  font-size: 5rem;
+}
+
+.accomodation__carousel .controls p {
+  align-self: flex-end;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin : 0 auto 1.5rem auto;
+}
+
+.controls__previous {
+  margin-left: 1.5rem;
+}
+
+.controls__next {
+  margin-right: 1.5rem;
+}
+
+.accomodation__carousel img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+}

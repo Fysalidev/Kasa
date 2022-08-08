@@ -1,88 +1,106 @@
 import "../styles/Accomodation.css";
-import accomodations from "../data/data.json";
+/* import accomodations from "../data/data.json"; */
 import { useParams } from "react-router-dom";
 import Error404 from "../pages/Error404";
-import Dropdown from "../components/Dropdown";
-import { useState } from "react";
+import Gallery from "../components/Gallery";
+/* import Dropdown from "../components/Dropdown"; */
+import { useState, useEffect } from "react";
 
 function Accomodation() {
   const { id } = useParams();
-  const accomodation = accomodations.filter(
-    (accomodation) => accomodation.id === id
+  const [accomodations, setAccomodations] = useState([]);
+  const [accomodation, setAccomodation] = useState();
+
+  useEffect(() => {
+    fetch("../data/data.json").then((response) =>
+      response
+        .json()
+        .then((data) => setAccomodations(data))
+        .catch((err) => console.log(err))
+    );
+  }, []);
+
+  useEffect(() => {
+    const accomodation = accomodations.find(
+      (accomodation) => accomodation.id === id
+    );
+    setAccomodation(accomodation ? accomodation : null);
+  }, [id, accomodations, accomodation]);
+
+  console.log(accomodations);
+  console.log(accomodation);
+
+  return accomodation ? (
+    <section className="accomodation">
+      <Gallery images={accomodation.pictures} />
+    </section>
+  ) : (
+    <Error404 />
   );
-  const tags = accomodation[0].tags;
+
+  /* const tags = accomodation[0].tags;
   const host = accomodation[0].host;
   const description = accomodation[0].description;
   const equipements = accomodation[0].equipments;
   const pictures = accomodation[0].pictures;
   const rating = parseInt(accomodation[0].rating);
-  const [galleryPosition, setGalleryPosition] = useState(0);
+  
 
-  const next = () => {
-    galleryPosition < pictures.length - 1
-      ? setGalleryPosition(galleryPosition + 1)
-      : setGalleryPosition(0);
-  };
-
-  const previous = () => {
-    galleryPosition > 0
-      ? setGalleryPosition(galleryPosition - 1)
-      : setGalleryPosition(pictures.length - 1);
-  };
+  
 
   const rate = (rating) => {
     const numberOfStar = [null, "one", "two", "three", "four", "five"];
     return "rating " + numberOfStar[rating];
   };
 
-  return accomodation.length === 1 ? (
+  return accomodation === !undefined ? (
     <section className="accomodation">
       <div className="accomodation__carousel">
         <div className="controls">
-          {pictures.length > 1 ? (
+          {accomodation.pictures.length > 1 ? (
             <button className="controls__previous" onClick={() => previous()}>
               <i className="fa-solid fa-chevron-left"></i>
             </button>
           ) : null}
           <p>
-            {galleryPosition + 1}/{pictures.length}
+            {galleryPosition + 1}/{accomodation.pictures.length}
           </p>
-          {pictures.length > 1 ? (
+          {accomodation.pictures.length > 1 ? (
             <button className="controls__next" onClick={() => next()}>
               <i className="fa-solid fa-chevron-right"></i>
             </button>
           ) : null}
         </div>
-        <img src={pictures[galleryPosition]} alt="#" />
+        <img src={accomodation.pictures[galleryPosition]} alt="#" />
       </div>
       <div className="accomodation__info">
         <div className="accomodation__info__content">
-          <h1>{accomodation[0].title}</h1>
-          <p>{accomodation[0].location}</p>
+          {<h1>{accomodation.title}</h1>}
+          <p>{accomodation.location}</p>
           <ul className="tagsList">
-            {tags.map((tag) => (
+            {accomodation.tags.map((tag) => (
               <li key={tag}>{tag}</li>
             ))}
           </ul>
         </div>
         <div className="accomodation__info__content">
           <div className="profile">
-            <p>{host.name}</p>
-            <img src={host.picture} alt={host.name} />
+            <p>{accomodation.host.name}</p>
+            <img src={accomodation.host.picture} alt={accomodation.host.name} />
           </div>
-          <div className={rate(rating)}>
+          <div className={rate(accomodation.rating)}>
             <i className="fa-solid fa-star"></i>
           </div>
         </div>
       </div>
       <div className="accomodation__dorpdowns">
-        <Dropdown title="Description" content={description} />
-        <Dropdown title="Equipement" content={equipements} />
+        <Dropdown title="Description" content={accomodation.description} />
+        <Dropdown title="Equipement" content={accomodation.equipements} />
       </div>
     </section>
   ) : (
     <Error404 />
-  );
+  ); */
 }
 
 export default Accomodation;
