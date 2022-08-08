@@ -3,7 +3,7 @@ import accomodations from "../data/data.json";
 import { useParams } from "react-router-dom";
 import Error404 from "../pages/Error404";
 import Dropdown from "../components/Dropdown";
-import {useState} from "react";
+import { useState } from "react";
 
 function Accomodation() {
   const { id } = useParams();
@@ -15,27 +15,43 @@ function Accomodation() {
   const description = accomodation[0].description;
   const equipements = accomodation[0].equipments;
   const pictures = accomodation[0].pictures;
+  const rating = parseInt(accomodation[0].rating);
   const [galleryPosition, setGalleryPosition] = useState(0);
 
   const next = () => {
-    galleryPosition < pictures.length - 1 ? setGalleryPosition(galleryPosition + 1) : setGalleryPosition(0);
-  }
+    galleryPosition < pictures.length - 1
+      ? setGalleryPosition(galleryPosition + 1)
+      : setGalleryPosition(0);
+  };
 
   const previous = () => {
-    galleryPosition > 0 ? setGalleryPosition(galleryPosition - 1) : setGalleryPosition(pictures.length - 1);
-  }
+    galleryPosition > 0
+      ? setGalleryPosition(galleryPosition - 1)
+      : setGalleryPosition(pictures.length - 1);
+  };
+
+  const rate = (rating) => {
+    const numberOfStar = [null, "one", "two", "three", "four", "five"];
+    return "rating " + numberOfStar[rating];
+  };
 
   return accomodation.length === 1 ? (
     <section className="accomodation">
       <div className="accomodation__carousel">
         <div className="controls">
-          <button className="controls__previous" onClick={()=>previous()}>
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
-          <p>{galleryPosition + 1}/{pictures.length}</p>
-          <button className="controls__next" onClick={()=>next()}>
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
+          {pictures.length > 1 ? (
+            <button className="controls__previous" onClick={() => previous()}>
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+          ) : null}
+          <p>
+            {galleryPosition + 1}/{pictures.length}
+          </p>
+          {pictures.length > 1 ? (
+            <button className="controls__next" onClick={() => next()}>
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+          ) : null}
         </div>
         <img src={pictures[galleryPosition]} alt="#" />
       </div>
@@ -54,11 +70,7 @@ function Accomodation() {
             <p>{host.name}</p>
             <img src={host.picture} alt={host.name} />
           </div>
-          <div className="rating">
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
-            <i className="fa-solid fa-star"></i>
+          <div className={rate(rating)}>
             <i className="fa-solid fa-star"></i>
           </div>
         </div>

@@ -38,7 +38,7 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin : 0 auto 1.5rem auto;
 }
 
 .controls__previous {
@@ -58,7 +58,7 @@
   width: 100%;
 }
 
-.accomodation__info{
+.accomodation__info {
   display: flex;
   justify-content: space-between;
 }
@@ -95,6 +95,61 @@
   font-size: 1.7rem;
   gap: 10px;
   justify-content: flex-end;
+}
+
+.rating,
+.one i::before {
+  content: "\f005   ";
+}
+
+.rating,
+.one i::after {
+  content: "\f005   \f005\   f005\   f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.two i::before {
+  content: "\f005  \f005   ";
+}
+
+.rating,
+.two i::after {
+  content: "\f005\f005\f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.three i::before {
+  content: "\f005   \f005   \f005   ";
+}
+
+.rating,
+.three i::after {
+  content: "\f005  \f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.four i::before {
+  content: "\f005   \f005   \f005   \f005   ";
+}
+
+.rating,
+.four i::after {
+  content: "\f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.five i::before {
+  content: "\f005   \f005   \f005   \f005   \f005";
+}
+
+.rating,
+.five i::after {
+  content: "";
+  color: #e3e3e3;
 }
 
 .accomodation__info__content h1 {
