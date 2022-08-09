@@ -4,6 +4,8 @@ import { useState } from "react";
 function Dropdown({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log(content)
+
   return (
     <div className="dropdown grow1">
       <div className="dropdown-button">

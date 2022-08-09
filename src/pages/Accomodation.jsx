@@ -15,7 +15,7 @@ function Accomodation({accomodations}) {
       <Informations accomodation={accomodation} />
       <div className="accomodation__dorpdowns">
         <Dropdown title="Description" content={accomodation.description} />
-        <Dropdown title="Equipement" content={accomodation.equipements} />
+        <Dropdown title="Equipement" content={accomodation.equipments} />
       </div>
     </section>
   ) : (
