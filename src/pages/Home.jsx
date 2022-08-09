@@ -2,28 +2,8 @@ import "../styles/Home.css";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
-import { useEffect, useState } from "react";
 
-function Home() {
-  const [accomodations, setAccomodations] = useState([]);
-
-  useEffect(() => {
-    fetch("../data/data.json").then((response) =>
-      response
-        .json()
-        .then((data) => setAccomodations(data))
-        .catch((err) => console.log(err))
-    );
-  }, []);
-
-  console.log(accomodations);
-/*   const kiki = accomodations.find(
-    (accomodation) => accomodation.id === "c67ab8a7"
-  );
-
-  console.log(kiki) */
-  
-
+function Home({ accomodations }) {
   return (
     <section className="home">
       <Banner title="Chez vous, partout et ailleurs" type="banner-home" />

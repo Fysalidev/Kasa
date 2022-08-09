@@ -1,42 +1,71 @@
 import "../styles/Accomodation.css";
-/* import accomodations from "../data/data.json"; */
 import { useParams } from "react-router-dom";
-import Error404 from "../pages/Error404";
+import Error404 from "./Error404";
 import Gallery from "../components/Gallery";
-/* import Dropdown from "../components/Dropdown"; */
-import { useState, useEffect } from "react";
+import Informations from "../components/Informations";
+import Dropdown from "../components/Dropdown";
 
-function Accomodation() {
+function Accomodation({accomodations}) {
   const { id } = useParams();
-  const [accomodations, setAccomodations] = useState([]);
-  const [accomodation, setAccomodation] = useState();
-
-  useEffect(() => {
-    fetch("../data/data.json").then((response) =>
-      response
-        .json()
-        .then((data) => setAccomodations(data))
-        .catch((err) => console.log(err))
-    );
-  }, []);
-
-  useEffect(() => {
-    const accomodation = accomodations.find(
-      (accomodation) => accomodation.id === id
-    );
-    setAccomodation(accomodation ? accomodation : null);
-  }, [id, accomodations, accomodation]);
-
-  console.log(accomodations);
-  console.log(accomodation);
+  const accomodation = accomodations.find((accomodation) => accomodation.id === id);
 
   return accomodation ? (
     <section className="accomodation">
       <Gallery images={accomodation.pictures} />
+      <Informations accomodation={accomodation} />
+      <div className="accomodation__dorpdowns">
+        <Dropdown title="Description" content={accomodation.description} />
+        <Dropdown title="Equipement" content={accomodation.equipements} />
+      </div>
     </section>
   ) : (
     <Error404 />
   );
+
+  
+  
+
+
+
+  
+
+ /*  const rate = (rating) => {
+    const numberOfStar = [null, "one", "two", "three", "four", "five"];
+    return "rating " + numberOfStar[rating];
+  };
+ */
+  /* return loading && accomodationLoading ? (
+    <section className="accomodation">
+      <Gallery images={accomodation.pictures} />
+      <div className="accomodation__info">
+        <div className="accomodation__info__content">
+          {<h1>{accomodation.title}</h1>}
+          <p>{accomodation.location}</p>
+          <ul className="tagsList">
+            {accomodation.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="accomodation__info__content">
+          <div className="profile">
+            <p>{accomodation.host.name}</p>
+            <img src={accomodation.host.picture} alt={accomodation.host.name} />
+          </div>
+          <div className={rate(accomodation.rating)}>
+            <i className="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div className="accomodation__dorpdowns">
+        <Dropdown title="Description" content={accomodation.description} />
+        <Dropdown title="Equipement" content={accomodation.equipements} />
+      </div>
+    </section>
+  ) 
+  : (
+    <Error404 />
+  ); */
 
   /* const tags = accomodation[0].tags;
   const host = accomodation[0].host;
