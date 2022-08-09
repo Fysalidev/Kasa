@@ -1,0 +1,62 @@
+.rating {
+  align-items: center;
+  display: flex;
+  font-size: 1.7rem;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.rating,
+.one i::before {
+  content: "\f005   ";
+}
+
+.rating,
+.one i::after {
+  content: "\f005   \f005\   f005\   f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.two i::before {
+  content: "\f005  \f005   ";
+}
+
+.rating,
+.two i::after {
+  content: "\f005\f005\f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.three i::before {
+  content: "\f005   \f005   \f005   ";
+}
+
+.rating,
+.three i::after {
+  content: "\f005  \f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.four i::before {
+  content: "\f005   \f005   \f005   \f005   ";
+}
+
+.rating,
+.four i::after {
+  content: "\f005";
+  color: #e3e3e3;
+}
+
+.rating,
+.five i::before {
+  content: "\f005   \f005   \f005   \f005   \f005";
+}
+
+.rating,
+.five i::after {
+  content: "";
+  color: #e3e3e3;
+}

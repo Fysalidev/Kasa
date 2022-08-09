@@ -1,0 +1,61 @@
+.accomodation__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accomodation__info__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.profile p {
+  text-align: right;
+  width: 93px;
+}
+
+.profile img {
+  border-radius: 25rem;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  width: 64px;
+}
+
+.accomodation__info__content h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.accomodation__info__content p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.accomodation__info__content ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.accomodation__info__content li {
+  align-items: center;
+  background: #ff6060;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  height: 25px;
+  justify-content: center;
+  min-width: 115px;
+  padding: 0.5rem 1rem;
+}

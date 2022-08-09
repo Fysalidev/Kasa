@@ -15,6 +15,7 @@ function Gallery({ images }) {
       ? setGalleryPosition(galleryPosition - 1)
       : setGalleryPosition(images.length - 1);
   };
+
   return (
     <div className="accomodation__carousel">
       <div className="controls">
