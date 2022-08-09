@@ -1,8 +1,13 @@
-import '../styles/About.css';
+import "../styles/About.css";
+import { useEffect } from "react";
 import Banner from "../components/Banner";
 import Dropdown from "../components/Dropdown";
 
 function About() {
+  useEffect(() => {
+    document.title = `Kasa - About`;
+  });
+
   return (
     <section className="about">
       <Banner title="" type="banner-about" />
@@ -26,4 +31,3 @@ function About() {
   );
 }
 export default About;
-

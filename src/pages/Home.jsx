@@ -1,9 +1,14 @@
 import "../styles/Home.css";
-import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import Banner from "../components/Banner";
 import Card from "../components/Card";
 
 function Home({ accomodations }) {
+  useEffect(() => {
+    document.title = `Kasa - Home`;
+  });
+
   return (
     <section className="home">
       <Banner title="Chez vous, partout et ailleurs" type="banner-home" />

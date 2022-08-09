@@ -1,7 +1,12 @@
-import '../styles/Error404.css';
+import "../styles/Error404.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Error404() {
+  useEffect(() => {
+    document.title = `Kasa - Erreur 404`;
+  });
+
   return (
     <section className="error404">
       <h1>404</h1>
