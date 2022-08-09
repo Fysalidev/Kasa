@@ -1,4 +1,5 @@
-import Starsrating from "../styles/Informations.css";
+import "../styles/Informations.css";
+import Starsrating from "../components/Starsrating";
 
 function Informations({ accomodation }) {
   return (

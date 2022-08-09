@@ -2,8 +2,6 @@ import "../styles/Gallery.css";
 import { useState } from "react";
 
 function Gallery({ images }) {
-  console.log(images);
-
   const [galleryPosition, setGalleryPosition] = useState(0);
 
   const next = () => {
