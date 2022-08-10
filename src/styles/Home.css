@@ -1,11 +1,16 @@
 .gallery {
   background-color: #f7f7f7;
   border-radius: 25px;
+  width: 100%;
 }
 
 .gallery ul {
-  display: flex;
+  display:flex;
   flex-wrap: wrap;
-  padding: 50px;
-  gap: 60px;
+  gap:1rem;
+}
+
+.gallery ul li{
+  max-width: 340px;
+  height: 340px;
 }

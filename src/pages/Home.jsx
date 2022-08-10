@@ -17,7 +17,7 @@ function Home({ accomodations }) {
           {accomodations.map((accomodation) => (
             <li key={accomodation.id}>
               <Link to={`/accomodation/${accomodation.id}`}>
-                <Card title={accomodation.title} />
+                <Card title={accomodation.title} cover={accomodation.cover} />
               </Link>
             </li>
           ))}
