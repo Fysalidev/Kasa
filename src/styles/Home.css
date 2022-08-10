@@ -1,16 +1,13 @@
-.gallery {
+.accomodation-list {
   background-color: #f7f7f7;
   border-radius: 25px;
   width: 100%;
-}
-
-.gallery ul {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.gallery ul li{
+.accomodation-list li {
   max-width: 340px;
   height: 340px;
 }
