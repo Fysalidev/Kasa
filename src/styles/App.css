@@ -1,15 +1,15 @@
-#root{
-    display:flex;
-    flex-direction:column;
-    gap:2rem;
-}
-
 section {
-    min-height: 53rem;
+  min-height: 53rem;
 }
 
-.home{
-    display:flex;
-    flex-direction:column;
-    gap:3rem;
+Body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+@media (max-width: 1439px) {
+  Body {
+    padding: 0 21px;
+  }
 }

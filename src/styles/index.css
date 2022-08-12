@@ -1,18 +1,12 @@
-*{
-  box-sizing:border-box;
-  color:#FF6060;
+* {
+  box-sizing: border-box;
+  color: #ff6060;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin: 0;

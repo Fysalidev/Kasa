@@ -1,13 +1,30 @@
 .accomodation-list {
+  align-items: center;
   background-color: #f7f7f7;
   border-radius: 25px;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3.75rem;
+  margin:43px 0;
+  padding:56px 50px;
 }
 
-.accomodation-list li {
-  max-width: 340px;
-  height: 340px;
+@media(max-width: 1440px) {
+  .accomodation-list {
+   justify-content: center;
+  }
+}
+
+@media(max-width: 1039px) {
+  .accomodation-list li {
+    width: 100%;
+  }
+}
+
+@media(max-width: 768px) {
+  .accomodation-list {
+    margin:20px 0;
+    padding:0;
+    gap:1.25rem;
+  }
 }

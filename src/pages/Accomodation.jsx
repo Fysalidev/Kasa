@@ -17,14 +17,16 @@ function Accomodation({ accomodations }) {
   );
 
   return accomodation ? (
-    <section className="accomodation">
-      <Gallery images={accomodation.pictures} />
-      <Informations accomodation={accomodation} />
-      <div className="accomodation__dorpdowns">
-        <Dropdown title="Description" content={accomodation.description} />
-        <Dropdown title="Equipement" content={accomodation.equipments} />
-      </div>
-    </section>
+    <main>
+      <section className="accomodation">
+        <Gallery images={accomodation.pictures} />
+        <Informations accomodation={accomodation} />
+        <div className="accomodation__dorpdowns">
+          <Dropdown title="Description" content={accomodation.description} />
+          <Dropdown title="Equipement" content={accomodation.equipments} />
+        </div>
+      </section>
+    </main>
   ) : (
     <Error404 />
   );
