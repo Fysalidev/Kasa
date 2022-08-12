@@ -13,7 +13,7 @@ function Informations({ accomodation }) {
           ))}
         </ul>
       </div>
-      <div className="accomodation__info__content">
+      <div className="accomodation__info__content responsive">
         <div className="profile">
           <p>{accomodation.host.name}</p>
           <img src={accomodation.host.picture} alt={accomodation.host.name} />

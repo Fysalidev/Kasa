@@ -9,3 +9,9 @@
   gap: 1rem;
   justify-content: space-between;
 }
+
+@media (max-width: 992px) {
+  .accomodation__dorpdowns {
+    flex-direction: column;
+  }
+}

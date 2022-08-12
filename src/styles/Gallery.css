@@ -51,3 +51,14 @@
   top: 0;
   width: 100%;
 }
+
+@media(max-width:769px){
+  .accomodation__carousel {
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .accomodation__carousel .controls button i {
+  font-size: 1rem;
+}
+}
