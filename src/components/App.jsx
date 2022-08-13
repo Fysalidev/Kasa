@@ -21,11 +21,7 @@ function App() {
         .catch((err) => console.log(err))
     );
   }, []);
-
-  useEffect(() => {
-    document.title = `Home`;
-  }, []);
-
+  
   return (
     <BrowserRouter>
       <Header />
