@@ -1,4 +1,3 @@
-import "../styles/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Accomodation from "../pages/Accomodation";
@@ -13,7 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
- /*  useEffect(() => {
+  /*  useEffect(() => {
     fetch("../data/data.json").then((response) =>
       response
         .json()
@@ -25,7 +24,7 @@ function App() {
     );
   }, []); */
 
-    useEffect(() => {
+  useEffect(() => {
     async function fetchAccomodations() {
       try {
         const response = await fetch("../data/data.json");

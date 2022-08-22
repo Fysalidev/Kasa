@@ -1,30 +1,66 @@
-.accomodation-list {
+.home {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.home-cards {
   background-color: #f7f7f7;
   border-radius: 25px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 3.75rem;
-  margin:43px 0;
-  padding:56px 50px;
+  justify-content: center;
 }
 
-@media(max-width: 1440px) {
+.accomodation-list {
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  padding: 40px 0;
+  width: 90%;
+}
+
+.accomodation-list li {
+  padding: 1rem;
+}
+
+/* Media */
+
+@media (max-width: 1280px) {
+  .home {
+    padding: 0 21px;
+  }
+
   .accomodation-list {
-   justify-content: center;
+    justify-content: center;
   }
 }
 
-@media(max-width: 1039px) {
+@media (max-width: 1039px) {
   .accomodation-list li {
     width: 100%;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
+  .home {
+    gap: 0rem;
+  }
+
+  .home-cards {
+    background-color: white;
+    border-radius: none;
+  }
+
   .accomodation-list {
-    margin:20px 0;
-    padding:0;
-    gap:1.25rem;
+    margin: 20px 0;
+    padding: 0;
+    gap: 1.25rem;
+    width: auto;
+  }
+
+  .accomodation-list li {
+    padding: 0rem;
   }
 }

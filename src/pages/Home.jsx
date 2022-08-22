@@ -13,6 +13,7 @@ function Home({ accomodations }) {
     <main>
       <section className="home">
         <Banner title="Chez vous, partout et ailleurs" type="banner-home" />
+        <div className="home-cards">
         <ul className="accomodation-list">
           {accomodations.map((accomodation) => (
             <li key={accomodation.id}>
@@ -22,6 +23,7 @@ function Home({ accomodations }) {
             </li>
           ))}
         </ul>
+        </div>
       </section>
     </main>
   );
