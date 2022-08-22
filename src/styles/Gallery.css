@@ -52,13 +52,13 @@
   width: 100%;
 }
 
-@media(max-width:769px){
+@media (max-width: 769px) {
   .accomodation__carousel {
-    height: 255px;
     border-radius: 10px;
+    height: 255px;
   }
 
   .accomodation__carousel .controls button i {
-  font-size: 1rem;
-}
+    font-size: 1rem;
+  }
 }

@@ -18,18 +18,18 @@
 
 .banner-home {
   background: rgba(0, 0, 0, 0.3) url("../assets/banner_home.png");
+  background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: darken;
 }
 
 .banner-about {
   background: rgba(0, 0, 0, 0.3) url("../assets/banner_about.png");
+  background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode: darken;
 }
 
 @media (max-width: 768px) {

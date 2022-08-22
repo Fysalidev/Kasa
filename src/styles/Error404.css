@@ -1,8 +1,8 @@
 .error404 {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .error404 h1 {

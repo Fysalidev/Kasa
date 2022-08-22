@@ -1,17 +1,17 @@
-footer{
+footer {
     align-items: center;
     background-color: black;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:15px;
+    gap: 15px;
     height: 209px;
     justify-content: center;
-    margin-top:1rem;
+    margin-top: 1rem;
     width: 100%;
 }
 
-footer img{
-    width : 122px;
+footer img {
+    width: 122px;
     height: 40px;
 }
 
@@ -19,5 +19,5 @@ footer p {
     color: white;
     font-size: 24px;
     text-align: center;
-    margin:0;
+    margin: 0;
 }

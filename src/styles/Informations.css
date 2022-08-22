@@ -19,7 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top:20px
+  margin-top: 20px;
 }
 
 .accomodation__info__content li {
@@ -56,37 +56,36 @@
   width: 64px;
 }
 
-@media (max-width: 992px){
-  .accomodation__info{
+@media (max-width: 992px) {
+  .accomodation__info {
     flex-direction: column;
   }
 
-  .responsive{
-    display:flex;
+  .responsive {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
 
-  .accomodation__info .profile{
+  .accomodation__info .profile {
     margin-top: 20px;
   }
-
 }
 
-@media(max-width: 768px){
-  .accomodation__info__content h1{
+@media (max-width: 768px) {
+  .accomodation__info__content h1 {
     font-size: 18px;
   }
 
-  .accomodation__info__content p{
+  .accomodation__info__content p {
     font-size: 14px;
   }
 
-  .accomodation__info__content li{
+  .accomodation__info__content li {
     font-size: 10px;
   }
 
-  .profile img{
+  .profile img {
     height: 40px;
     width: 40px;
   }

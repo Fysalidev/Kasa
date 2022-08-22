@@ -55,7 +55,7 @@ header nav ul li .active {
 
   header nav ul li {
     font-size: 12px;
-    text-transform: uppercase;
     padding-left: 10px;
+    text-transform: uppercase;
   }
 }
