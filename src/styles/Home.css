@@ -26,9 +26,9 @@
 }
 
 @media (max-width: 1280px) {
-  .home {
+  /* .home {
     padding: 0 21px;
-  }
+  } */
 
   .accomodation-list {
     justify-content: center;
